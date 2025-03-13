@@ -73,22 +73,22 @@ const Footer: React.FC = () => {
             </Heading>
             <HStack>
               <Icon as={FaMapMarkerAlt} />
-              <Text>Số 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</Text>
+              <Text>2/18 Ngo Den, Nha Trang, Khánh Hòa</Text>
             </HStack>
             <HStack>
               <Icon as={FaPhoneAlt} />
-              <Text>Hotline: 1900 1234</Text>
+              <Text>Hotline: 0888 884 368</Text>
             </HStack>
             <HStack>
               <Icon as={FaEnvelope} />
-              <Text>Email: info@70maivietnam.store</Text>
+              <Text>Email: hdnhatrang@gmail.com</Text>
             </HStack>
           </Stack>
         </SimpleGrid>
 
         <Box borderTopWidth={1} borderTopColor="gray.700" pt={6}>
           <Text textAlign="center" fontSize="sm">
-            © {new Date().getFullYear()} 70mai Vietnam. Tất cả quyền được bảo lưu.
+            © {new Date().getFullYear()} 70mai Nha Trang. Tất cả quyền được bảo lưu.
           </Text>
         </Box>
       </Container>
