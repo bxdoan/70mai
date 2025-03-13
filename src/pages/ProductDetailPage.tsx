@@ -140,7 +140,7 @@ const ProductDetailPage: React.FC = () => {
             </HStack>
 
             <Text fontSize="lg">
-              Liên hệ để được hỗ trợ giá tốt nhất : <Link to="tel:0888884368">0888 884 368</Link>
+              Liên hệ để được hỗ trợ giá tốt nhất : <Link to="tel:0888884368">08 8888 4368</Link>
             </Text>
 
             <Text mb={6}>

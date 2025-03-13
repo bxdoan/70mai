@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
             </HStack>
             <HStack>
               <Icon as={FaPhoneAlt} />
-              <Text>Hotline: <Link href="tel:0888884368">0888 884 368</Link></Text>
+              <Text>Hotline: <Link href="tel:0888884368">08 8888 4368</Link></Text>
             </HStack>
             <HStack>
               <Icon as={FaEnvelope} />
