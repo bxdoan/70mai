@@ -3,6 +3,7 @@ import { Box, Container } from '@chakra-ui/react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import CallButton from '../components/CallButton';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -34,6 +35,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </Container>
       </Box>
       <Footer />
+      <CallButton 
+        phoneNumbers={[
+          {
+            phoneNumber: "0888884368",
+            displayNumber: "08.8888.4368",
+            label: "Tư vấn mua hàng"
+          },
+          {
+            phoneNumber: "0905281283",
+            displayNumber: "0905.281.283",
+            label: "Hỗ trợ chung"
+          }
+        ]}
+        zaloLink="https://zalo.me/hdnhatrang"
+        zaloLabel="Nhắn tin tư vấn qua Zalo"
+      />
     </Box>
   );
 };

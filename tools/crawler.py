@@ -170,7 +170,7 @@ class ProductCrawler:
             logger.info(f"Dừng thêm {extra_delay:.2f} giây để giả lập người dùng thật...")
             time.sleep(extra_delay)
 
-    def get_soup(self, url, max_retries=5):
+    def get_soup(self, url, max_retries=3):
         """Tải nội dung trang và trả về đối tượng BeautifulSoup với khả năng thử lại"""
         for attempt in range(max_retries):
             try:
@@ -332,12 +332,20 @@ class ProductCrawler:
                         
                     if link_element and 'href' in link_element.attrs:
                         product_url = urljoin(self.base_url, link_element['href'])
-                        # Kiểm tra xem URL có phải là URL sản phẩm camera không
-                        if "camera-hanh-trinh" in product_url and product_url not in product_links:
+                        # Kiểm tra xem URL có phải là URL sản phẩm hợp lệ không (bao gồm cả camera và phụ kiện)
+                        valid_product_types = ["camera-hanh-trinh", "phu-kien-70mai", "bo-tich-dien", "tpms", "bom", "kich-binh"]
+                        is_valid_product = any(product_type in product_url for product_type in valid_product_types)
+                        
+                        if is_valid_product and product_url not in product_links:
+                            logger.info(f"Đã tìm thấy URL sản phẩm: {product_url}")
                             product_links.append(product_url)
                 
-                # Nếu đã tìm thấy sản phẩm với selector hiện tại, không cần thử các selector khác
+                # Ghi lại số lượng sản phẩm tìm thấy với selector này
+                logger.info(f"Đã tìm thấy {len(product_links)} sản phẩm hợp lệ với selector '{selector}' trên {current_page}")
+                
+                # NẾU đã tìm thấy đủ nhiều sản phẩm, có thể dừng lại
                 if product_links:
+                    logger.info(f"Đã tìm thấy đủ {len(product_links)} sản phẩm, dừng tìm kiếm thêm selector")
                     break
         
         if not found_products or not product_links:
@@ -378,7 +386,7 @@ class ProductCrawler:
         # Trích xuất thông tin cơ bản
         product = {
             "id": str(self.next_id),
-            "category": "camera-hanh-trinh"
+            "category": "phu-kien-70mai"
         }
         self.next_id += 1
         
@@ -491,8 +499,37 @@ class ProductCrawler:
             description_element = soup.select_one(selector)
             if description_element:
                 break
-                
-        product["description"] = description_element.text.strip() if description_element else "Camera hành trình 70mai chính hãng với chất lượng hình ảnh cao, nhiều tính năng thông minh giúp bảo vệ hành trình của bạn."
+        
+        # Mô tả ngắn gọn
+        short_description = description_element.text.strip() if description_element else "Camera hành trình 70mai chính hãng với chất lượng hình ảnh cao, nhiều tính năng thông minh giúp bảo vệ hành trình của bạn."
+        
+        # Lấy mô tả chi tiết sản phẩm từ div có class "uk-margin-small uk-container" và id="detail"
+        detailed_description_element = soup.select_one('div.uk-margin-small.uk-container div#detail')
+        if detailed_description_element:
+            logger.info("Đã tìm thấy mô tả chi tiết sản phẩm")
+            # Lưu cả HTML của phần mô tả chi tiết
+            detailed_description_html = str(detailed_description_element)
+            # Lưu cả text của phần mô tả chi tiết
+            detailed_description_text = detailed_description_element.get_text(separator=' ', strip=True)
+            # Lưu cả hai vào product
+            product["description"] = short_description
+            product["detailed_description_html"] = detailed_description_html
+            product["detailed_description_text"] = detailed_description_text
+        else:
+            # Thử tìm với selector khác nếu không tìm thấy
+            alternative_detail_element = soup.select_one('#detail') or soup.select_one('.entry-content') or soup.select_one('.product-description')
+            if alternative_detail_element:
+                logger.info("Đã tìm thấy mô tả chi tiết sản phẩm (selector thay thế)")
+                detailed_description_html = str(alternative_detail_element)
+                detailed_description_text = alternative_detail_element.get_text(separator=' ', strip=True)
+                product["description"] = short_description
+                product["detailed_description_html"] = detailed_description_html 
+                product["detailed_description_text"] = detailed_description_text
+            else:
+                logger.warning("Không tìm thấy mô tả chi tiết sản phẩm")
+                product["description"] = short_description
+                product["detailed_description_html"] = ""
+                product["detailed_description_text"] = ""
         
         # Lấy danh sách tính năng
         features = []
@@ -727,7 +764,7 @@ if __name__ == "__main__":
     try:
         # Khởi tạo crawler với URL trang 2 và file sản phẩm hiện có
         crawler = ProductCrawler(
-            base_url="https://70maivietnam.store/camera-hanh-trinh/page/2/",
+            base_url="https://70maivietnam.store/phu-kien-camera/",
             existing_products_file=existing_products_file
         )
         
