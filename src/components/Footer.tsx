@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYoutube, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const Footer: React.FC = () => {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8} mb={8}>
           <Stack spacing={4} align="flex-start">
             <Image 
-              src="https://70maivietnam.store/cdn/shop/files/70mai-logo.png"
+              src={logo}
               alt="70mai Logo"
               h="40px"
               objectFit="contain"
@@ -29,7 +30,7 @@ const Footer: React.FC = () => {
               mb={2}
             />
             <Text fontSize="sm">
-              70mai là thương hiệu hàng đầu về thiết bị thông minh cho xe hơi,
+              70mai Nha Trang là thương hiệu hàng đầu về thiết bị thông minh cho xe hơi,
               cung cấp các sản phẩm camera hành trình và phụ kiện chất lượng cao.
             </Text>
             <HStack spacing={4} mt={2}>
@@ -46,7 +47,7 @@ const Footer: React.FC = () => {
           </Stack>
 
           <Stack spacing={4} align="flex-start">
-            <Heading as="h4" size="md" mb={2}>
+            <Heading as="h4" size="md" mb={2} color="white">
               Sản phẩm
             </Heading>
             <Link as={RouterLink} to="/category/camera-hanh-trinh">Camera hành trình</Link>
@@ -57,7 +58,7 @@ const Footer: React.FC = () => {
           </Stack>
 
           <Stack spacing={4} align="flex-start">
-            <Heading as="h4" size="md" mb={2}>
+            <Heading as="h4" size="md" mb={2} color="white">
               Thông tin
             </Heading>
             <Link as={RouterLink} to="/about">Giới thiệu</Link>
@@ -68,7 +69,7 @@ const Footer: React.FC = () => {
           </Stack>
 
           <Stack spacing={4} align="flex-start">
-            <Heading as="h4" size="md" mb={2}>
+            <Heading as="h4" size="md" mb={2} color="white">
               Liên hệ
             </Heading>
             <HStack>

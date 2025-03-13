@@ -27,6 +27,7 @@ import {
 import { Link } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiUser, FiMenu } from 'react-icons/fi';
 import { useCategories } from '../hooks/useCategories';
+import logo from '../assets/logo.png';
 
 const Header: React.FC = () => {
   const { categories } = useCategories();
@@ -56,7 +57,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <Link to="/">
           <Image 
-            src="https://70maivietnam.store/cdn/shop/files/70mai-logo.png"
+            src={logo}
             alt="70mai Logo"
             h="40px"
             objectFit="contain"

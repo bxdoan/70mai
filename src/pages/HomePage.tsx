@@ -15,6 +15,9 @@ import { useProducts } from '../hooks/useProducts';
 import { useCategories } from '../hooks/useCategories';
 import ProductCard from '../components/ProductCard';
 import MainLayout from '../layouts/MainLayout';
+import support from '../assets/support.jpg';
+import shipping from '../assets/shipping.png';
+import chinhhang from '../assets/chinh-hang.png';
 
 const HomePage: React.FC = () => {
   const { products, isLoading } = useProducts();
@@ -26,7 +29,7 @@ const HomePage: React.FC = () => {
     <MainLayout>
       {/* Hero Section */}
       <Box 
-        bgImage="url('https://70maivietnam.store/cdn/shop/files/70mai-banner-web.png')"
+        bgImage="url('https://70maivietnam.store/wp-content/themes/yootheme/cache/98/70maivietnam-tc-98e4ba46.webp')"
         bgSize="cover"
         bgPosition="center"
         h="500px"
@@ -161,7 +164,7 @@ const HomePage: React.FC = () => {
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           <Flex direction="column" align="center" textAlign="center">
             <Image 
-              src="https://70maivietnam.store/cdn/shop/files/70mai_A800_4K_Ultra_HD_270.png" 
+              src={chinhhang}
               alt="Sản phẩm chính hãng"
               h="100px"
               objectFit="contain"
@@ -174,7 +177,7 @@ const HomePage: React.FC = () => {
           </Flex>
           <Flex direction="column" align="center" textAlign="center">
             <Image 
-              src="https://70maivietnam.store/cdn/shop/files/70mai_Dash_Cam_M300_2_270.png" 
+              src={support}
               alt="Hỗ trợ kỹ thuật 24/7"
               h="100px"
               objectFit="contain"
@@ -187,7 +190,7 @@ const HomePage: React.FC = () => {
           </Flex>
           <Flex direction="column" align="center" textAlign="center">
             <Image 
-              src="https://70maivietnam.store/cdn/shop/files/70mai_Dash_Cam_Pro_Plus_A500s_300.png" 
+              src={shipping} 
               alt="Giao hàng toàn quốc"
               h="100px"
               objectFit="contain"
