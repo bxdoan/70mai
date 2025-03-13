@@ -1,0 +1,133 @@
+[
+  {
+    "id": "1",
+    "name": "Camera hành trình 70mai Dash Cam Pro Plus+ A500s",
+    "price": 2590000,
+    "originalPrice": 2990000,
+    "discount": 13,
+    "category": "camera-hanh-trinh",
+    "imageUrl": "https://70maivietnam.store/cdn/shop/products/70mai_Dash_Cam_Pro_Plus_A500s.png",
+    "description": "Camera hành trình 70mai Pro Plus+ A500s sử dụng cảm biến Sony IMX335 5MP, GPS tích hợp, quay video 2K 1440p và nhiều tính năng cao cấp khác.",
+    "features": [
+      "Cảm biến SONY IMX335",
+      "Độ phân giải 2K 1440p 30fps",
+      "Ống kính F1.8 góc rộng 140°",
+      "Tích hợp GPS",
+      "Quay đêm rõ nét với WDR"
+    ],
+    "stock": 15,
+    "specifications": {
+      "brand": "70mai",
+      "model": "A500s",
+      "resolution": "2K 1440p",
+      "sensor": "Sony IMX335",
+      "storage": "Hỗ trợ thẻ nhớ đến 128GB (không kèm theo)",
+      "connectivity": "Wi-Fi",
+      "power": "5V/2A"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Camera hành trình 70mai Dash Cam M300",
+    "price": 1390000,
+    "originalPrice": 1590000,
+    "discount": 13,
+    "category": "camera-hanh-trinh",
+    "imageUrl": "https://70maivietnam.store/cdn/shop/products/70mai_Dash_Cam_M300_1600x.jpg",
+    "description": "Camera hành trình 70mai M300 cung cấp khả năng quay video Full HD 1080p, góc quay rộng 140 độ, giám sát đỗ xe thông minh.",
+    "features": [
+      "Độ phân giải Full HD 1080p",
+      "Góc quay rộng 140°",
+      "Giám sát đỗ xe",
+      "Cảm biến G-sensor",
+      "Quay đêm rõ nét"
+    ],
+    "stock": 10,
+    "specifications": {
+      "brand": "70mai",
+      "model": "M300",
+      "resolution": "Full HD 1080p",
+      "sensor": "High-quality Image Sensor",
+      "storage": "Hỗ trợ thẻ nhớ đến 128GB (không kèm theo)",
+      "connectivity": "Wi-Fi",
+      "power": "5V/1.5A"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Camera hành trình 70mai Dash Cam A400",
+    "price": 1790000,
+    "originalPrice": 1990000,
+    "discount": 10,
+    "category": "camera-hanh-trinh",
+    "imageUrl": "https://70maivietnam.store/cdn/shop/products/70mai_Dash_Cam_A400_1600x.jpg",
+    "description": "Camera hành trình 70mai A400 với độ phân giải 2.5K, tính năng cảnh báo an toàn và giám sát đỗ xe thông minh.",
+    "features": [
+      "Độ phân giải 2.5K 1440p",
+      "Góc quay rộng 140°",
+      "Giám sát đỗ xe thông minh",
+      "Hỗ trợ thẻ nhớ 128GB",
+      "Cảm biến G-sensor"
+    ],
+    "stock": 20,
+    "specifications": {
+      "brand": "70mai",
+      "model": "A400",
+      "resolution": "2.5K 1440p",
+      "sensor": "Advanced Image Sensor",
+      "storage": "Hỗ trợ thẻ nhớ đến 128GB (không kèm theo)",
+      "connectivity": "Wi-Fi",
+      "power": "5V/2A"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Máy bơm lốp xe 70mai Air Compressor 1S",
+    "price": 890000,
+    "originalPrice": 1090000,
+    "discount": 18,
+    "category": "phu-kien-xe-hoi",
+    "imageUrl": "https://70maivietnam.store/cdn/shop/products/70mai_Air_Compressor_1S_grande.jpg",
+    "description": "Máy bơm lốp xe 70mai Air Compressor 1S nhỏ gọn, áp suất cao 150PSI, đèn LED tích hợp và 5 chế độ bơm khác nhau.",
+    "features": [
+      "Áp suất cao tối đa 150PSI",
+      "5 chế độ bơm",
+      "Đèn LED tích hợp",
+      "Pin 2000mAh",
+      "Màn hình LED hiển thị"
+    ],
+    "stock": 8,
+    "specifications": {
+      "brand": "70mai",
+      "model": "Air Compressor 1S",
+      "pressure": "150PSI",
+      "battery": "2000mAh",
+      "dimension": "124 x 71 x 45.6mm",
+      "weight": "490g"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Đế hút chân không 70mai Suction Mount Holder",
+    "price": 350000,
+    "originalPrice": 450000,
+    "discount": 22,
+    "category": "phu-kien-camera",
+    "imageUrl": "https://70maivietnam.store/cdn/shop/products/70mai_Suction_Mount_Holder_1600x.jpg",
+    "description": "Đế hút chân không 70mai Suction Mount Holder giúp gắn camera hành trình lên kính xe an toàn, chắc chắn.",
+    "features": [
+      "Gắn chắc chắn lên kính",
+      "Chân đế hút chân không",
+      "Thiết kế nhỏ gọn",
+      "Tương thích nhiều loại camera 70mai"
+    ],
+    "stock": 25,
+    "specifications": {
+      "brand": "70mai",
+      "model": "Suction Mount Holder",
+      "compatibility": "Tương thích với các loại camera 70mai",
+      "material": "ABS chất lượng cao",
+      "dimension": "70 x 70 x 85mm"
+    }
+  }
+] 
