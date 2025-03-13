@@ -29,7 +29,7 @@ import {
   Tr,
   Td
 } from '@chakra-ui/react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
 import { FaCheck } from 'react-icons/fa';
 import { useProduct } from '../hooks/useProducts';
@@ -138,6 +138,10 @@ const ProductDetailPage: React.FC = () => {
                 </Text>
               )}
             </HStack>
+
+            <Text fontSize="lg">
+              Liên hệ để được hỗ trợ giá tốt nhất : <Link to="tel:0888884368">0888 884 368</Link>
+            </Text>
 
             <Text mb={6}>
               {product.description}
