@@ -74,15 +74,15 @@ const Footer: React.FC = () => {
             </Heading>
             <HStack>
               <Icon as={FaMapMarkerAlt} />
-              <Text>2/18 Ngo Den, Nha Trang, Khánh Hòa</Text>
+              <Text>Địa chỉ: <Link href="https://maps.app.goo.gl/Trt57uWqNHq36yVQ8" isExternal>2/18 Ngô Đến, Nha Trang, Khánh Hòa</Link></Text>
             </HStack>
             <HStack>
               <Icon as={FaPhoneAlt} />
-              <Text>Hotline: 0888 884 368</Text>
+              <Text>Hotline: <Link href="tel:0888884368">0888 884 368</Link></Text>
             </HStack>
             <HStack>
               <Icon as={FaEnvelope} />
-              <Text>Email: hdnhatrang@gmail.com</Text>
+              <Text>Email: <Link href="mailto:hdnhatrang79@gmail.com">hdnhatrang79@gmail.com</Link></Text>
             </HStack>
           </Stack>
         </SimpleGrid>
