@@ -2,6 +2,7 @@ import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { HelmetProvider } from 'react-helmet-async';
 
 import theme from './theme/theme';
 import HomePage from './pages/HomePage';
@@ -22,14 +23,16 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/product/:id" element={<ProductDetailPage />} />
-            <Route path="/category/:id" element={<CategoryPage />} />
-            <Route path="*" element={<HomePage />} />
-          </Routes>
-        </Router>
+        <HelmetProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/product/:id" element={<ProductDetailPage />} />
+              <Route path="/category/:id" element={<CategoryPage />} />
+              <Route path="*" element={<HomePage />} />
+            </Routes>
+          </Router>
+        </HelmetProvider>
       </ChakraProvider>
     </QueryClientProvider>
   );

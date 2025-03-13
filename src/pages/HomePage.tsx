@@ -18,6 +18,7 @@ import MainLayout from '../layouts/MainLayout';
 import support from '../assets/support.jpg';
 import shipping from '../assets/shipping.png';
 import chinhhang from '../assets/chinh-hang.png';
+import logo from '../assets/logo.png';
 
 const HomePage: React.FC = () => {
   const { products, isLoading } = useProducts();
@@ -26,7 +27,12 @@ const HomePage: React.FC = () => {
   const featuredProducts = products.slice(0, 4);
   
   return (
-    <MainLayout>
+    <MainLayout 
+      title="70mai Nha Trang - Đại lý phân phối chính thức thiết bị hành trình, camera ô tô"
+      description="Đại lý phân phối chính thức thiết bị hành trình, camera hành trình ô tô, dash cam 70mai, camera giám sát, camera quan sát phía sau tại Việt Nam"
+      image={logo}
+      url="https://70mai.vercel.app"
+    >
       {/* Hero Section */}
       <Box 
         bgImage="url('https://70maivietnam.store/wp-content/themes/yootheme/cache/98/70maivietnam-tc-98e4ba46.webp')"

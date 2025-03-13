@@ -81,7 +81,12 @@ const ProductDetailPage: React.FC = () => {
   }
 
   return (
-    <MainLayout>
+    <MainLayout
+      title={product ? `${product.name} - 70mai Nha Trang` : '70mai Nha Trang - Chi tiết sản phẩm'}
+      description={product ? product.description.substring(0, 160) : 'Chi tiết sản phẩm camera hành trình 70mai chính hãng'}
+      image={product?.imageUrl || "https://70maivietnam.store/wp-content/themes/yootheme/cache/57/70mai-logo-575ce63c.webp"}
+      url={`https://70mai.vercel.app/product/${id}`}
+    >
       <Container maxW="container.xl" py={8}>
         <Flex direction={{ base: 'column', md: 'row' }} gap={8}>
           {/* Product Image */}

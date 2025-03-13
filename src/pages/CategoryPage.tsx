@@ -87,7 +87,12 @@ const CategoryPage: React.FC = () => {
   const isLoading = isCategoryLoading || isProductsLoading;
 
   return (
-    <MainLayout>
+    <MainLayout
+      title={category ? `${category.name} - 70mai Nha Trang` : '70mai Nha Trang - Danh mục sản phẩm'}
+      description={category ? `Khám phá sản phẩm ${category.name} chính hãng từ 70mai Nha Trang - Đại lý phân phối chính thức` : 'Danh mục sản phẩm 70mai chính hãng tại Việt Nam'}
+      image={category?.imageUrl || "https://70maivietnam.store/wp-content/themes/yootheme/cache/57/70mai-logo-575ce63c.webp"}
+      url={`https://70mai.vercel.app/category/${id}`}
+    >
       <Container maxW="container.xl" py={8}>
         {category && (
           <Box mb={8}>

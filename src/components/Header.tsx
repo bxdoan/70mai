@@ -54,15 +54,25 @@ const Header: React.FC = () => {
           variant="ghost"
         />
 
-        {/* Logo */}
-        <Link to="/">
-          <Image 
-            src={logo}
-            alt="70mai Logo"
-            h="40px"
-            objectFit="contain"
-          />
-        </Link>
+        {/* Logo and Description */}
+        <Flex direction="column" align={{ base: "center", md: "flex-start" }}>
+          <Link to="/">
+            <Image 
+              src={logo}
+              alt="70mai Logo"
+              h="45px"
+              objectFit="contain"
+            />
+          </Link>
+          <Text 
+            fontSize="xs" 
+            color="gray.500" 
+            mt={1} 
+            display={{ base: 'none', md: 'block' }}
+          >
+            Đại lý phân phối chính thức tại Việt Nam
+          </Text>
+        </Flex>
 
         {/* Desktop Navigation */}
         <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
@@ -142,12 +152,17 @@ const Header: React.FC = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Image 
-              src="https://70maivietnam.store/cdn/shop/files/70mai-logo.png"
-              alt="70mai Logo"
-              h="30px"
-              objectFit="contain"
-            />
+            <Flex direction="column" align="center">
+              <Image 
+                src={logo}
+                alt="70mai Logo"
+                h="40px"
+                objectFit="contain"
+              />
+              <Text fontSize="xs" color="gray.500" mt={1}>
+                Đại lý phân phối chính thức tại Việt Nam
+              </Text>
+            </Flex>
           </DrawerHeader>
           <DrawerBody>
             <VStack align="start" spacing={4}>
