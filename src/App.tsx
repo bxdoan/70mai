@@ -8,6 +8,8 @@ import theme from './theme/theme';
 import HomePage from './pages/HomePage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CategoryPage from './pages/CategoryPage';
+import ProductPage from './pages/ProductPage';
+import ContactPage from './pages/ContactPage';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -29,6 +31,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
               <Route path="/category/:id" element={<CategoryPage />} />
+              <Route path="/products" element={<ProductPage />} />
+              <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<HomePage />} />
             </Routes>
           </Router>

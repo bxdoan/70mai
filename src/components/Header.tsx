@@ -77,9 +77,10 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
           <Link to="/">Trang chủ</Link>
+          <Link to="/products">Sản phẩm</Link>
           <Menu>
             <MenuButton as={Button} variant="ghost" px={2}>
-              Sản phẩm
+              Phân loại
             </MenuButton>
             <MenuList>
               {categories.map((category) => (
@@ -89,7 +90,6 @@ const Header: React.FC = () => {
               ))}
             </MenuList>
           </Menu>
-          <Link to="/about">Giới thiệu</Link>
           <Link to="/contact">Liên hệ</Link>
         </HStack>
 
