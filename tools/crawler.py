@@ -386,7 +386,7 @@ class ProductCrawler:
         # Trích xuất thông tin cơ bản
         product = {
             "id": str(self.next_id),
-            "category": "phu-kien-70mai"
+            "category": "phu-kien-camera"
         }
         self.next_id += 1
         
@@ -764,7 +764,7 @@ if __name__ == "__main__":
     try:
         # Khởi tạo crawler với URL trang 2 và file sản phẩm hiện có
         crawler = ProductCrawler(
-            base_url="https://70maivietnam.store/phu-kien-camera/",
+            base_url="https://70maivietnam.store/phu-kien-camera/page/4/",
             existing_products_file=existing_products_file
         )
         

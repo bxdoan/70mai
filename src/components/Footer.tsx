@@ -12,7 +12,7 @@ import {
   Icon 
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaYoutube, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaGithub } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
@@ -42,6 +42,9 @@ const Footer: React.FC = () => {
               </Link>
               <Link href="https://youtube.com" isExternal>
                 <Icon as={FaYoutube} boxSize={5} />
+              </Link>
+              <Link href="https://github.com/bxdoan" isExternal>
+                <Icon as={FaGithub} boxSize={5} />
               </Link>
             </HStack>
           </Stack>
