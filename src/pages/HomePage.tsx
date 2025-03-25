@@ -205,7 +205,7 @@ const HomePage: React.FC = () => {
             <Heading as="h3" size="md" mb={2}>
               Giao hàng toàn quốc
             </Heading>
-            <Text>Giao hàng nhanh chóng, miễn phí trong nội thành TP. Hồ Chí Minh</Text>
+            <Text>Giao hàng nhanh chóng, miễn phí trong nội thành TP. Nha Trang</Text>
           </Flex>
         </SimpleGrid>
       </Box>

@@ -14,7 +14,16 @@ import {
   Tooltip
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaYoutube, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaGithub } from 'react-icons/fa';
+import { 
+  FaFacebook, 
+  FaInstagram, 
+  FaYoutube, 
+  FaPhoneAlt, 
+  FaMapMarkerAlt, 
+  FaEnvelope, 
+  FaGithub, 
+  FaCommentDots 
+} from 'react-icons/fa';
 import { 
   FaCcVisa, 
   FaCcMastercard, 
@@ -134,6 +143,14 @@ const Footer: React.FC = () => {
             <HStack>
               <Icon as={FaPhoneAlt} />
               <Text>Hotline: <Link href="tel:0888884368">08 8888 4368</Link></Text>
+            </HStack>
+            <HStack>
+              <Icon as={FaPhoneAlt} />
+              <Text>Hotline: <Link href="tel:0905281283">0905 281 283</Link></Text>
+            </HStack>
+            <HStack>
+              <Icon as={FaCommentDots} />
+              <Text>Zalo: <Link href="https://zalo.me/0888884368">08 8888 4368</Link></Text>
             </HStack>
             <HStack>
               <Icon as={FaEnvelope} />

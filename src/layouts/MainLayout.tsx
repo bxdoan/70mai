@@ -48,7 +48,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
             label: "Hỗ trợ chung"
           }
         ]}
-        zaloLink="https://zalo.me/hdnhatrang"
+        zaloLink="https://zalo.me/0888884368"
         zaloLabel="Nhắn tin tư vấn qua Zalo"
       />
     </Box>

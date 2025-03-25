@@ -22,23 +22,19 @@ import {
   DrawerCloseButton,
   useDisclosure,
   VStack,
-  Text
+  Text,
+  Link,
+  useBreakpointValue
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { FiSearch, FiShoppingCart, FiUser, FiMenu } from 'react-icons/fi';
+import { Link as RouterLink } from 'react-router-dom';
+import { FiShoppingCart, FiUser, FiMenu, FiPhone } from 'react-icons/fi';
 import { useCategories } from '../hooks/useCategories';
 import logo from '../assets/logo.png';
 
 const Header: React.FC = () => {
   const { categories } = useCategories();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Navigate to search results page with query
-    window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
-  };
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const cartItemsCount = 0; // This would be from a cart context/hook in a real app
 
@@ -56,7 +52,7 @@ const Header: React.FC = () => {
 
         {/* Logo and Description */}
         <Flex direction="column" align={{ base: "center", md: "flex-start" }}>
-          <Link to="/">
+          <Link as={RouterLink} to="/">
             <Image 
               src={logo}
               alt="70mai Logo"
@@ -76,50 +72,36 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
-          <Link to="/">Trang chủ</Link>
-          <Link to="/products">Sản phẩm</Link>
+          <Link as={RouterLink} to="/">Trang chủ</Link>
+          <Link as={RouterLink} to="/products">Sản phẩm</Link>
           <Menu>
             <MenuButton as={Button} variant="ghost" px={2}>
-              Phân loại
+              Phân loại
             </MenuButton>
             <MenuList>
               {categories.map((category) => (
-                <MenuItem key={category.id} as={Link} to={`/category/${category.id}`}>
+                <MenuItem key={category.id} as={RouterLink} to={`/category/${category.id}`}>
                   {category.name}
                 </MenuItem>
               ))}
             </MenuList>
           </Menu>
-          <Link to="/contact">Liên hệ</Link>
+          <Link as={RouterLink} to="/contact">Liên hệ</Link>
         </HStack>
 
-        {/* Search, Account, Cart */}
+        {/* Contact, Account, Cart */}
         <HStack spacing={4}>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <form onSubmit={handleSearch}>
-              <InputGroup>
-                <Input 
-                  placeholder="Tìm kiếm..." 
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <InputRightElement>
-                  <IconButton 
-                    aria-label="Search" 
-                    icon={<FiSearch />} 
-                    variant="ghost" 
-                    type="submit"
-                  />
-                </InputRightElement>
-              </InputGroup>
-            </form>
-          </Box>
+          {!isMobile && (  
+            <Link href="tel:0888884368">
+              <Text fontWeight="bold">Hotline: 08 8888 4368</Text>
+            </Link>
+          )}
           
           <IconButton 
             aria-label="User Account" 
             icon={<FiUser />} 
             variant="ghost"
-            as={Link}
+            as={RouterLink}
             to="/account"
           />
           
@@ -128,7 +110,7 @@ const Header: React.FC = () => {
               aria-label="Shopping Cart" 
               icon={<FiShoppingCart />} 
               variant="ghost"
-              as={Link}
+              as={RouterLink}
               to="/cart"
             />
             {cartItemsCount > 0 && (
@@ -166,11 +148,12 @@ const Header: React.FC = () => {
           </DrawerHeader>
           <DrawerBody>
             <VStack align="start" spacing={4}>
-              <Link to="/" onClick={onClose}>Trang chủ</Link>
+              <Link as={RouterLink} to="/" onClick={onClose}>Trang chủ</Link>
               <Text fontWeight="bold">Sản phẩm</Text>
               <VStack align="start" spacing={2} pl={4}>
                 {categories.map((category) => (
                   <Link 
+                    as={RouterLink}
                     key={category.id} 
                     to={`/category/${category.id}`} 
                     onClick={onClose}
@@ -179,28 +162,12 @@ const Header: React.FC = () => {
                   </Link>
                 ))}
               </VStack>
-              <Link to="/about" onClick={onClose}>Giới thiệu</Link>
-              <Link to="/contact" onClick={onClose}>Liên hệ</Link>
+              <Link as={RouterLink} to="/about" onClick={onClose}>Giới thiệu</Link>
+              <Link as={RouterLink} to="/contact" onClick={onClose}>Liên hệ</Link>
               
-              <Box pt={4} w="100%">
-                <form onSubmit={handleSearch}>
-                  <InputGroup>
-                    <Input 
-                      placeholder="Tìm kiếm..." 
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                    <InputRightElement>
-                      <IconButton 
-                        aria-label="Search" 
-                        icon={<FiSearch />} 
-                        variant="ghost" 
-                        type="submit"
-                      />
-                    </InputRightElement>
-                  </InputGroup>
-                </form>
-              </Box>
+              <Link href="tel:0888884368" w="100%">
+                <Text fontWeight="bold">Hotline: 08 8888 4368</Text>
+              </Link>
             </VStack>
           </DrawerBody>
         </DrawerContent>
