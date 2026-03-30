@@ -1455,5 +1455,32 @@
       "connectivity": "Wi-Fi",
       "power": "5V/2A"
     }
+  },
+  {
+    "id": "54",
+    "category": "camera-hanh-trinh",
+    "name": "Camera Hành Trình 70mai T800\n",
+    "price": 7900000,
+    "originalPrice": 12000000,
+    "discount": 0,
+    "imageUrl": "https://70maivietnam.store/wp-content/uploads/2026/02/combo-anh-dai-dien-T800-2-580x580.jpg",
+    "description": "Công nghệ Sony STARVIS 2 kép: Sở hữu kích thước điểm ảnh lớn hơn giúp tăng cường khả năng thu sáng, mang lại hình ảnh sắc nét và chi tiết hơn ngay cả trong điều kiện thiếu sáng.\n\nGhi hình 3 kênh HDR: 70mai 4K T800 kết hợp camera trước và trong xe tích hợp tiết kiệm không gian với camera sau, cung cấp góc nhìn 3 chiều toàn diện, hầu như loại bỏ điểm mù.\nKết nối 4G LTE*: Đảm bảo liên lạc không gián đoạn với xe của bạn từ bất kỳ vị trí nào. ( *Cần lắp bộ Hardwire Kit 4G 70mai và được bán riêng.)\nChế độ Giám sát Đỗ xe Thông minh* cả 3 kênh: Tích hợp tính năng Phát hiện Chuyển động AI, Phát hiện Va chạm & Ghi hình Time-lapse(*Cần lắp thêm bộ Hardwire Kit 70mai và được bán riêng.)\n\nTích hợp GPS & ADAS, ghi hình khẩn cấp có bộ nhớ đệm, siêu tụ điện, điều khiển giọng nói, phát hiện chuyển động AI…",
+    "features": [
+      "Công nghệ Sony STARVIS 2 kép: Sở hữu kích thước điểm ảnh lớn hơn giúp tăng cường khả năng thu sáng, mang lại hình ảnh sắc nét và chi tiết hơn ngay cả trong điều kiện thiếu sáng.",
+      "Ghi hình 3 kênh HDR: 70mai 4K T800 kết hợp camera trước và trong xe tích hợp tiết kiệm không gian với camera sau, cung cấp góc nhìn 3 chiều toàn diện, hầu như loại bỏ điểm mù.",
+      "Kết nối 4G LTE*: Đảm bảo liên lạc không gián đoạn với xe của bạn từ bất kỳ vị trí nào. ( *Cần lắp bộ Hardwire Kit 4G 70mai và được bán riêng.)",
+      "Chế độ Giám sát Đỗ xe Thông minh* cả 3 kênh: Tích hợp tính năng Phát hiện Chuyển động AI, Phát hiện Va chạm & Ghi hình Time-lapse(*Cần lắp thêm bộ Hardwire Kit 70mai và được bán riêng.)",
+      "Tích hợp GPS & ADAS, ghi hình khẩn cấp có bộ nhớ đệm, siêu tụ điện, điều khiển giọng nói, phát hiện chuyển động AI…"
+    ],
+    "stock": 17,
+    "specifications": {
+      "brand": "70mai",
+      "model": "T800",
+      "resolution": "4K",
+      "sensor": "High-quality Image Sensor",
+      "storage": "Hỗ trợ thẻ nhớ đến 512GB (không kèm theo)",
+      "connectivity": "Wi-Fi",
+      "power": "5V/2A"
+    }
   }
 ]
