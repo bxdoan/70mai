@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Box, 
   Flex, 
   Image, 
-  Input, 
-  InputGroup, 
-  InputRightElement, 
-  Button, 
+  Button,
   HStack, 
   IconButton, 
   Badge, 
@@ -27,7 +24,7 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-import { FiShoppingCart, FiUser, FiMenu, FiPhone } from 'react-icons/fi';
+import { FiShoppingCart, FiUser, FiMenu } from 'react-icons/fi';
 import { useCategories } from '../hooks/useCategories';
 import logo from '../assets/logo.png';
 

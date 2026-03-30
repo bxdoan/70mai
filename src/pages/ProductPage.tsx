@@ -124,6 +124,7 @@ const ProductPage: React.FC = () => {
                         <Text fontSize="sm">{formatPrice(filter.minPrice || 0)}</Text>
                         <Text fontSize="sm">{formatPrice(filter.maxPrice || 5000000)}</Text>
                       </Flex>
+                      {/* eslint-disable-next-line jsx-a11y/aria-proptypes */}
                       <RangeSlider
                         aria-label={['min', 'max']}
                         min={0}
