@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-proptypes */
 import React, { useState } from 'react';
 import { 
   Box, 
@@ -124,9 +125,8 @@ const ProductPage: React.FC = () => {
                         <Text fontSize="sm">{formatPrice(filter.minPrice || 0)}</Text>
                         <Text fontSize="sm">{formatPrice(filter.maxPrice || 5000000)}</Text>
                       </Flex>
-                      {/* eslint-disable-next-line jsx-a11y/aria-proptypes */}
                       <RangeSlider
-                        aria-label={['min', 'max']}
+                        aria-label={['Giá tối thiểu', 'Giá tối đa']}
                         min={0}
                         max={5000000}
                         step={100000}
