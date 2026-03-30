@@ -2,6 +2,9 @@
   "name": "70mai-store",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
@@ -26,7 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3900 && react-scripts start",
+    "start": "react-scripts start",
+    "start:win": "set PORT=3900 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
