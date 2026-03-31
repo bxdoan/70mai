@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
               cung cấp các sản phẩm camera hành trình và phụ kiện chất lượng cao.
             </Text>
             <HStack spacing={4} mt={2}>
-              <Link href="https://facebook.com" isExternal>
+              <Link href="https://www.facebook.com/70mai79" isExternal>
                 <Icon as={FaFacebook} boxSize={5} />
               </Link>
               <Link href="https://instagram.com" isExternal>
