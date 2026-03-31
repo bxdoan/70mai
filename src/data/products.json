@@ -1484,5 +1484,39 @@
       "connectivity": "Wi-Fi",
       "power": "5V/2A"
     }
+  },
+  {
+    "id": "55",
+    "category": "camera-hanh-trinh",
+    "name": "Camera hành trình 70mai A800SE",
+    "price": 3190000,
+    "originalPrice": 4190000,
+    "discount": 9,
+    "imageUrl": "https://70maivietnam.store/wp-content/uploads/2026/02/combo-anh-dai-dien-T800-2-580x580.jpg",
+    "description": "Camera hành trình 70mai A800SE sở hữu khả năng ghi hình chuẩn 4K UHD (3840×2160) với tốc độ 30 khung hình/giây, tái hiện hình ảnh sống động, chi tiết đến từng điểm ảnh. Mỗi khung hình đều rõ nét, chân thực, giúp bạn không bỏ lỡ bất kỳ tình huống quan trọng nào trên đường.\n\nĐược trang bị công nghệ HDR tiên tiến, A800SE xử lý ánh sáng và bóng tối một cách tinh tế, mang lại hình ảnh cân bằng và hài hòa trong mọi điều kiện – từ ánh nắng gắt đến những đoạn đường hầm tối hay khi lái xe ban đêm. Nhờ đó, bạn luôn có được bằng chứng hình ảnh rõ ràng, đáng tin cậy, bất kể môi trường xung quanh ra sao.\n",
+    "detailed_description_html": "",
+    "detailed_description_text": "",
+    "features": [
+      "Chuẩn 4K UHD thực ở 30FPS: Ghi hình ở độ phân giải 3840×2160 với tốc độ 30 khung hình/giây mà không qua xử lý nâng cấp, giúp ghi lại các chi tiết quan trọng như biển báo giao thông và biển số xe một cách rõ nét.",
+      "Công nghệ HDR: Mang đến hình ảnh rõ nét và tự nhiên vượt trội bằng cách cân bằng vùng sáng và tối gắt ngay tại cảm biến, giúp ghi hình sắc nét, không méo hình ngay cả trong hầm, trên đường ngược sáng hoặc vào ban đêm.",
+      "Super Night Vision: Được trang bị thuật toán tự phát triển, khẩu độ lớn F1.55 và HDR cấp phần cứng, mẫu 4K A800SE ghi lại hình ảnh ban đêm sắc nét, tự nhiên với độ chính xác màu sắc được cải thiện",
+      "Ghi hình khẩn cấp có bộ đệm: Ghi lại tối đa 3 phút trước va chạm, khoảnh khắc va chạm và 30 giây sau đó, đảm bảo không bỏ sót bất kỳ bằng chứng quan trọng nào trong trường hợp va chạm đột ngột hoặc tình huống khẩn cấp.",
+      "Siêu tụ điện: Chịu được nhiệt độ hoạt động khắc nghiệt và có tuổi thọ cao qua nhiều chu kỳ sạc.",
+      "Ghi hình vòng lặp: Ghi liên tục theo chu kỳ, tự động ghi đè các tệp cũ bằng các bản ghi mới, đảm bảo quá trình ghi hình không bị gián đoạn và không lo đầy bộ nhớ.",
+      "GPS tích hợp: Ghi lại tốc độ, thời gian và tọa độ, được lưu tự động để xem lại trong ứng dụng 70mai, cung cấp bằng chứng hành trình và hỗ trợ tối ưu hóa lộ trình.",
+      "ADAS siêu nhận diện: Được trang bị hệ thống ADAS 5 chế độ, mẫu 4K A800SE cảnh báo sớm để giảm thiểu rủi ro khi lái xe, mang đến lớp bảo vệ bổ sung cho hành trình của bạn.",
+      "Giám sát đỗ xe thông minh 24 giờ: Cảm biến va chạm G-Sensor và ghi hình tua nhanh đảm bảo giám sát liên tục khi xe đỗ, tự động ghi lại sự cố khi phát hiện va chạm.",
+      "Điều khiển qua ứng dụng: Wi-Fi 6 tích hợp cung cấp kết nối nhanh và ổn định với ứng dụng 70mai, cho phép bạn xem trước…"
+    ],
+    "stock": 17,
+    "specifications": {
+      "brand": "70mai",
+      "model": "A800SE",
+      "resolution": "4K",
+      "sensor": "High-quality Image Sensor",
+      "storage": "Hỗ trợ thẻ nhớ đến 512GB (không kèm theo)",
+      "connectivity": "Wi-Fi",
+      "power": "5V/2A"
+    }
   }
 ]

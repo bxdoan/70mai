@@ -44,7 +44,7 @@ const CategoryPage: React.FC = () => {
   const [filter, setFilter] = useState<Filter>({
     category: id,
     minPrice: 0,
-    maxPrice: 5000000,
+    maxPrice: 50000000,
     searchQuery: ''
   });
   const { products, isLoading: isProductsLoading } = useProducts(filter);
@@ -144,14 +144,14 @@ const CategoryPage: React.FC = () => {
                       <Text mb={2} fontWeight="medium">Khoảng giá</Text>
                       <Flex justify="space-between" mb={2}>
                         <Text fontSize="sm">{formatPrice(filter.minPrice || 0)}</Text>
-                        <Text fontSize="sm">{formatPrice(filter.maxPrice || 5000000)}</Text>
+                        <Text fontSize="sm">{formatPrice(filter.maxPrice || 50000000)}</Text>
                       </Flex>
                       <RangeSlider
                         aria-label={['Giá tối thiểu', 'Giá tối đa']}
                         min={0}
-                        max={5000000}
+                        max={50000000}
                         step={100000}
-                        defaultValue={[filter.minPrice || 0, filter.maxPrice || 5000000]}
+                        defaultValue={[filter.minPrice || 0, filter.maxPrice || 50000000]}
                         onChange={handlePriceChange}
                         colorScheme="blue"
                       >
